@@ -5,10 +5,10 @@
   <%= @blog.title %>
 </p>
 
-<p>
+<!-- <p>
   <strong>String:</strong>
-  <%= @blog.string %>
-</p>
+  <%#= @blog.string %>
+</p> -->
 
 <p>
   <strong>Content:</strong>
@@ -16,9 +16,12 @@
 </p>
 
 <p>
-  <strong>String:</strong>
-  <%= @blog.string %>
+  <%= image_tag (@blog.image.url) if @blog.image.url %>
 </p>
+<!-- <p>
+  <strong>String:</strong>
+  <%#= @blog.string %>
+</p> -->
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

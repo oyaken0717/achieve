@@ -16,20 +16,20 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :string %>
-    <%= form.text_field :string %>
-  </div>
+  <!-- <div class="field">
+    <%#= form.label :string %>
+    <%#= form.text_field :string %>
+  </div> -->
 
   <div class="field">
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
 
-  <div class="field">
-    <%= form.label :string %>
-    <%= form.text_field :string %>
-  </div>
+  <%= form.label :image %>
+  <%= image_tag(@blog.image.url) if @blog.image.url %>
+  <%= form.file_field :image %>
+  <%= form.hidden_field :image_cache %>
 
   <div class="actions">
     <%= form.submit %>
