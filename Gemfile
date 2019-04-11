@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.5.1'
 
 gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -54,3 +54,7 @@ gem 'dotenv-rails'
 gem 'dotenv-rails' # 開発環境で環境変数を操作するのに必要
 gem 'unicorn' # アプリケーションサーバのunicorn
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
+
+# gem 'bcrypt', '~> 3.1.7'
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
